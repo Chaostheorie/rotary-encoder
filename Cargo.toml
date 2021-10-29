@@ -1,0 +1,26 @@
+[package]
+authors = ["Cobalt <https://cobalt.rocks>"]
+edition = "2021"
+license = "GPL-3-only"
+name = "rotary-encoder-embedded"
+version = "0.1.0"
+readme = "README.md"
+
+[lib]
+name = "rotary_encoder"
+path = "src/rotary.rs"
+
+[features]
+examples = ["panic-halt", "esp8266-hal", "xtensa-lx-rt", "xtensa-lx"]
+
+[dependencies]
+embedded-hal = { version = "0.2", features = ["unproven"] }
+esp8266-hal = { version = "0.5", optional = true }
+xtensa-lx-rt = { version = "0.7", features = ["lx106"], optional = true }
+xtensa-lx = { version = "0.4", optional = true }
+panic-halt = { version = "0.2", optional = true }
+num-traits = { version = "0.2", default-features = false }
+
+[[example]]
+name = "serial-led"
+required-features = ["examples"]
