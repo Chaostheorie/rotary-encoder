@@ -5,6 +5,8 @@ license = "GPL-3-only"
 name = "rotary-encoder-embedded"
 version = "0.1.0"
 readme = "README.md"
+repository = "https://github.com/Chaostheorie/rotary-encoder.git"
+homepage = "https://github.com/Chaostheorie/rotary-encoder"
 
 [lib]
 name = "rotary_encoder"
